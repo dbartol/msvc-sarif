@@ -1,0 +1,12 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  my_job:
+    name: Test
+    runs-on: windows-latest
+    steps:
+    - name: Compile
+      run: |
+        cl /c /analyze test.cpp /experimental:log test.sarif
+        type test.sarif
