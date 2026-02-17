@@ -1,4 +1,4 @@
 int foo() {
-  int *p = nullptr;
+  int *p;
   return *p;
 }
